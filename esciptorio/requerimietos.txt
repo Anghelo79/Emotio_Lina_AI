@@ -1,0 +1,7 @@
+instalar python 3.8.6
+pip install opencv-python==4.4.0.44
+pip install opencv-contrib-python==4.4.0.44
+pip install imutils
+pip install tensorflow==2.3.0
+pip install matplotlib
+pip install python-firebase

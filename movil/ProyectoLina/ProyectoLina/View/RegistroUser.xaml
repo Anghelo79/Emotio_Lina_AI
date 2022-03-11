@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoLina.View.RegistroUser">
+    <ContentPage.Content>
+        <Grid BackgroundColor="#7B97D7" AbsoluteLayout.LayoutFlags="HeightProportional" Padding="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" TextColor="Black" HorizontalOptions="CenterAndExpand" Text="Registró De Usuario" FontSize="Title"/>
+            <ScrollView Grid.Row="1" Grid.Column="0">
+                <StackLayout VerticalOptions="FillAndExpand">
+                    <Frame x:Name="frNombre" BorderColor="#6C75B0" BackgroundColor="#8BA5DF" CornerRadius="15" HasShadow="True" Padding="0">
+                        <Entry x:Name="txtNombre" BackgroundColor="Transparent" HorizontalTextAlignment="Center" Placeholder="Ingrese Su Nombre Completo" Keyboard="Text" IsSpellCheckEnabled="True" IsTextPredictionEnabled="True" TextChanged="txtNombre_TextChanged"/>
+                    </Frame>
+                    <Frame x:Name="frApellido" BorderColor="#6C75B0" BackgroundColor="#8BA5DF" CornerRadius="15" HasShadow="True" Padding="0">
+                        <Entry x:Name="txtApellido" BackgroundColor="Transparent" HorizontalTextAlignment="Center" Placeholder="Ingrese Su Apellido Completo" Keyboard="Text" IsSpellCheckEnabled="True" IsTextPredictionEnabled="True" TextChanged="txtApellido_TextChanged" />
+                    </Frame>
+                    <Label x:Name="viewfecha" TextColor="Black" Text="Ingrese La Fecha De Nacimiento" HorizontalTextAlignment="Center" FontSize="Body"/>
+                    <DatePicker x:Name="DatePikerFNacimineto" BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand"/>
+                    <Frame x:Name="frCi" BorderColor="#6C75B0" BackgroundColor="#8BA5DF" CornerRadius="15" HasShadow="True" Padding="0">
+                        <Entry x:Name="txtCi" BackgroundColor="Transparent" HorizontalTextAlignment="Center" Placeholder="Ingrese Su CI" Keyboard="Text" IsSpellCheckEnabled="True" IsTextPredictionEnabled="True"/>
+                    </Frame>
+                    <Frame x:Name="frInstitucion" BorderColor="#6C75B0" BackgroundColor="#8BA5DF" CornerRadius="15" HasShadow="True" Padding="0">
+                        <Entry x:Name="txtIstitusion" BackgroundColor="Transparent" HorizontalTextAlignment="Center" Placeholder="Ingrese La Institución " Keyboard="Text" IsSpellCheckEnabled="True" IsTextPredictionEnabled="True" />
+                    </Frame>
+                    <Frame x:Name="frNroMatricula" BorderColor="#6C75B0" BackgroundColor="#8BA5DF" CornerRadius="15" HasShadow="True" Padding="0">
+                        <Entry x:Name="txtNroMatricula" BackgroundColor="Transparent" HorizontalTextAlignment="Center" Placeholder="Ingrese El Nro. Matricula" Keyboard="Text" IsSpellCheckEnabled="True" IsTextPredictionEnabled="True" TextChanged="txtNroMatricula_TextChanged"/>
+                    </Frame>
+                    <Button x:Name="BtnNext" BackgroundColor="#8BA5DF" CornerRadius="20" FontSize="Medium" Text="SIGUENTE" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked" IsVisible="false"/>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

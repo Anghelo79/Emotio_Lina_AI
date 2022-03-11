@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             x:Class="ProyectoLina.View.ViewHome" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#7B97D7" AbsoluteLayout.LayoutFlags="HeightProportional" Padding="0">
+                <StackLayout>
+                    <StackLayout x:Name="stMenu" HeightRequest="175" Padding="5">
+                        <controls:CircleImage BorderColor="#132F6E" BorderThickness="3" HeightRequest="140" WidthRequest="140" Aspect="AspectFill" HorizontalOptions="Center" VerticalOptions="Center" Source="User.png"/>
+                        <Label x:Name="labetTitle" FontSize="Title" HorizontalOptions="Center" TextColor="Black">Innovation App</Label>
+                    </StackLayout>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="btnPublicado" BackgroundColor="#7B97D7" Grid.Row="0" Grid.Column="0" CornerRadius="5" FontSize="Medium" Text="Publicado" Clicked="btnPublicado_Clicked"/>
+                        <Button x:Name="btnNuevaPublicacion" BackgroundColor="#7B97D7" Grid.Row="0" Grid.Column="1" CornerRadius="5" FontSize="Medium" Text="Crear Publicación" Clicked="btnNuevaPublicacion_Clicked"/>
+                    </Grid>
+                </StackLayout>
+            </Frame>
+            <ScrollView Scrolled="Handle_Scrolled" x:Name="MyScrollView">
+                <StackLayout x:Name="stackView" HorizontalOptions="FillAndExpand"/>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

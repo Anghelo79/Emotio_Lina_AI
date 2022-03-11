@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoLina.View.CardView">
+    <ContentView.Content>
+        <Frame BorderColor="#30A7CA" BackgroundColor="#6EBCD4" CornerRadius="15" HasShadow="True" Padding="0">
+            <Grid Padding="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="lblEmocion" Grid.Row="0" Grid.Column="0" TextColor="Black" FontSize="Title" VerticalOptions="Center"></Label>
+                <ImageButton x:Name="btnMostrarOcultar" Grid.Row="0" Grid.Column="1" HorizontalOptions="End" HeightRequest="30" WidthRequest="30" BackgroundColor="Transparent" Source="ShowHide.png" IsVisible="false" Clicked="btnMostrarOcultar_Clicked"></ImageButton>
+                <Label x:Name="lblRangoEdad" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" TextColor="Black" FontSize="Small"></Label>
+                <Label x:Name="lblPublicacion" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" TextColor="Black" FontSize="Body"></Label>
+                <StackLayout Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" Margin="0,0,40,0" Padding="0">
+                    <Image HeightRequest="30" WidthRequest="30" Source="Views.png" VerticalOptions="Center"></Image>
+                    <Label x:Name="lblVistas" TextColor="Black" FontSize="Caption" VerticalTextAlignment="Center"></Label>
+                    <Image HeightRequest="30" WidthRequest="30" Source="Likes.png" VerticalOptions="Center"></Image>
+                    <Label x:Name="lblMeGusta" TextColor="Black" FontSize="Caption" VerticalTextAlignment="Center"></Label>
+                    <Image HeightRequest="26" WidthRequest="30" Source="Dislikes.png" VerticalOptions="Center"></Image>
+                    <Label x:Name="lblNoMeGusta" TextColor="Black" FontSize="Caption" VerticalTextAlignment="Center"></Label>
+                </StackLayout>
+                <ImageButton x:Name="btnBorrar" Grid.Row="3" Grid.Column="1" HorizontalOptions="End" HeightRequest="35" WidthRequest="30" Padding="0" BackgroundColor="Transparent" Source="Clear.png" Clicked="btnBorrar_Clicked"></ImageButton>
+            </Grid>
+        </Frame>
+    </ContentView.Content>
+</ContentView>

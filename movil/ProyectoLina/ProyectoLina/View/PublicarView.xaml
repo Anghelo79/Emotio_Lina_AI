@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoLina.View.PublicarView">
+  <ContentView.Content>
+        <StackLayout VerticalOptions="FillAndExpand" Padding="20">
+            <Label TextColor="Black" HorizontalTextAlignment="Center" FontSize="Body" Text="Seleccione El Estado De Ánimo"></Label>
+            <Frame x:Name="frPkEmotion" BorderColor="#6C75B0" CornerRadius="15" HasShadow="True" Padding="0">
+                <Picker x:Name="pickerEmotion" BackgroundColor="Transparent"></Picker>
+            </Frame>
+            <Label TextColor="Black" HorizontalTextAlignment="Center" FontSize="Body" Text="Seleccione El Rango De Edad"></Label>
+            <Frame x:Name="frPkAgeRange" BorderColor="#6C75B0" CornerRadius="15" HasShadow="True" Padding="0">
+                <Picker x:Name="pickerAgeRange" BackgroundColor="Transparent"></Picker>
+            </Frame>
+            <Frame x:Name="frPublicacion" BorderColor="#6C75B0" CornerRadius="15" HasShadow="True" Padding="0">
+                <Editor x:Name="txtpublicacion" AutoSize="TextChanges" MaxLength="500" BackgroundColor="Transparent" Placeholder="Ingrese Su Publicación" Keyboard="Text" IsSpellCheckEnabled="True" IsTextPredictionEnabled="True"/>
+            </Frame>
+            <Button x:Name="BtnPublicar" BackgroundColor="#8BA5DF" CornerRadius="20" FontSize="Medium" Text="PUBLICAR" HorizontalOptions="FillAndExpand" Clicked="BtnPublicar_Clicked"/>
+        </StackLayout>
+  </ContentView.Content>
+</ContentView>

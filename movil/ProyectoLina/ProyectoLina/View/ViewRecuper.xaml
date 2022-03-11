@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoLina.View.ViewRecuper">
+    <ContentPage.Content>
+        <Grid BackgroundColor="#7B97D7" AbsoluteLayout.LayoutFlags="HeightProportional" Padding="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" TextColor="Black" Text="Recuperar Cuenta" FontSize="Title" HorizontalOptions="CenterAndExpand"/>
+            <ScrollView Grid.Row="1" Grid.Column="0">
+                <StackLayout VerticalOptions="FillAndExpand">
+                    <Frame BorderColor="#6C75B0" BackgroundColor="#8BA5DF" CornerRadius="15" HasShadow="True" Padding="0">
+                        <Entry x:Name="txtCorreo" BackgroundColor="Transparent" Placeholder="Ingrese Su Correo Electrónico" HorizontalTextAlignment="Center" Keyboard="Email"/>
+                    </Frame>
+                    <Grid AbsoluteLayout.LayoutFlags="HeightProportional">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button BackgroundColor="#8BA5DF" Grid.Row="0" Grid.Column="0" CornerRadius="20" FontSize="Medium" x:Name="btnVerificarSend" Text="Confirmar" Clicked="btnVerificarSend_Clicked"/>
+                        <Button BackgroundColor="#8BA5DF" Grid.Row="0" Grid.Column="1" CornerRadius="20" IsVisible="false" FontSize="Medium" x:Name="btnCanselar" Text="Cancelar" Clicked="btnCanselar_Clicked"/>
+                    </Grid>
+                    <StackLayout x:Name="StaclayautConfirmate" IsVisible="false">
+                        <Label Text="Código De Confirmación" TextColor="Black" HorizontalOptions="CenterAndExpand" FontSize="Body"/>
+                        <Frame BorderColor="#6C75B0" BackgroundColor="#8BA5DF" CornerRadius="15" HasShadow="True" Padding="0">
+                            <Entry x:Name="txtCodigo" BackgroundColor="Transparent" Placeholder="Ingrese El Código De 4 Dígitos" HorizontalTextAlignment="Center" Keyboard="Numeric" MaxLength="4" TextChanged="txtCodigo_TextChanged" />
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout x:Name="Staclayautpasswort" IsVisible="false">
+                        <Label Text="Contraseña" TextColor="Black" HorizontalOptions="CenterAndExpand" FontSize="Body"/>
+                        <Label x:Name="msgPassword" IsVisible="false" Text="Debe Ser De 8 Caracteres Que Contenga Mayúscula, Minúscula, Numero Y Un Carácter Especial." TextColor="Black" HorizontalOptions="CenterAndExpand" FontSize="Body"/>
+                        <Frame x:Name="frPassword" BorderColor="#6C75B0" BackgroundColor="#8BA5DF" CornerRadius="15" HasShadow="True" Padding="0">
+                            <Entry x:Name="txtPasswor" BackgroundColor="Transparent" Placeholder="Ingrese Una Nueva Contraseña" HorizontalTextAlignment="Center"  IsPassword="True" TextChanged="txtPasswor_TextChanged"/>
+                        </Frame>
+                        <Frame x:Name="frPasswordVeri" BorderColor="#6C75B0" BackgroundColor="#8BA5DF" CornerRadius="15" HasShadow="True" Padding="0">
+                            <Entry x:Name="txtPassworVeri" BackgroundColor="Transparent" Placeholder="Vuelva A Ingresar La Contraseña" HorizontalTextAlignment="Center" IsPassword="True" TextChanged="txtPassworVeri_TextChanged"/>
+                        </Frame>
+                        <Button BackgroundColor="#8BA5DF" CornerRadius="20" FontSize="Medium" HorizontalOptions="FillAndExpand" x:Name="btnFinis" Text="Finalizar" Clicked="btnFinis_Clicked"/>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
